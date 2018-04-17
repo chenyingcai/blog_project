@@ -1,9 +1,9 @@
 #! /bin/sh
 # 由于存在需要权限建立新的文件夹,以及移动文件等 建议使用sudo /bin/bash project_pre.sh 启动此命令
-SEPR = '=========================================='
-PROJECTNAME = "demo"
-HUGO_DEMO = 'chenyingcai/hugo_demo:v1'
-BLOG_PORT = 8000
+$SEPR = '=========================================='
+$PROJECTNAME = "demo"
+$HUGO_DEMO = 'chenyingcai/hugo_demo:v1'
+$BLOG_PORT = 8000
 if [[ -f $("pwd")/PROJECT2 ]]; then
     alias hugopre = "docker run --it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
     alias copyresume "rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"

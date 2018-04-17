@@ -1,11 +1,11 @@
 #! /bin/sh
 # 由于存在需要权限建立新的文件夹,以及移动文件等 建议使用sudo /bin/bash project_build.sh 启动此命令
 
-SEPR = '=========================================='
-PROJECTNAME = "demo"
-HUGO_DEMO = 'chenyingcai/hugo_demo:v1'
-MY_RESUME = 'chenyingcai/resume:v1'
-RESUME_PORT = 8080
+$SEPR = '=========================================='
+$PROJECTNAME = "demo"
+$HUGO_DEMO = 'chenyingcai/hugo_demo:v1'
+$MY_RESUME = 'chenyingcai/resume:v1'
+$RESUME_PORT = 8080
 echo "开始检查是否有安装$HUGO_DEMO"
 echo $SEPR
 if [ "$(docker images -q $HUGO_DEMO 2> /dev/null)" == "" ]; then
