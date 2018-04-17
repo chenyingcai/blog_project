@@ -43,7 +43,7 @@ elif [ -f $('pwd')/PROJECT1 ]; then
     echo "Done"
     echo $SEPR
     echo "有的时候我们启动resume容器会出现一些意外, 若打开localhost:$RESUME_PORT无显示"
-    echo "重新执行docker exec -it resume run和docker exec -it resume generate"
+    echo "重新执行docker exec -it resume run和docker exec -it resume generate 以及 copyresume"
     echo $SEPR
     echo "resume项目可以通过localhost:$RESUME_PORT实时预览"
     echo "现在我们开始将resume项目产生的简历与博客连接"
