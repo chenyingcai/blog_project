@@ -7,6 +7,27 @@ MY_RESUME="chenyingcai/resume:v1"
 BLOG_PORT=8000
 RESUME_PORT=8080
 if [ -f $("pwd")/PROJECT2 ]; then
+    if [ ! "$(docker ps -q -f name=resume)" ]; then
+        if [ "$(docker ps -aq -f status=exited -f name=resume)" ]; then
+            # cleanup
+            docker rm resume
+        fi
+        # run your container
+        docker run -d --name resume -p $RESUME_PORT:80 \
+            -v $('pwd')/resume/themes:/usr/html/user/themes \
+            -v $('pwd')/resume/pages:/usr/html/user/pages \
+            -v $('pwd')/resume/config/:/usr/html/user/config/ \
+            -v $('pwd')/resume/static/:/usr/html/static \
+            --restart=always $MY_RESUME
+        echo "run the ngnix"
+        
+        docker exec -it resume run
+        
+        echo "Done"
+        echo "generate the initial html file"
+        sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/
+        echo "Done"
+    fi
     alias hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
     alias copyresume="sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
     echo "之后每次要预览时, 运行就再一次运行这个脚本, 或者hugopre"
