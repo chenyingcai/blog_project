@@ -1,0 +1,25 @@
+<div class="avoid_pagebreak animated fadeInUp">
+  <h4 class="title"><i class="fi-{{ module.header.icon }}"></i> {{ module.header.title }}</h4>
+  <div class="row skill">
+    {% for item in module.header.column %}
+      <div class="large-10 columns" {% if module.header.column_animation %}animated {{ module.header.column_animation }}{% endif %}">
+        <ul class="small-block-grid-2">
+          <li class="name">{{ item.name }}</li>
+          <li>
+            <ul class="small-block-grid-8 ellipses">
+              {% for i in 1..8 %}
+              <li><span {% if i > item.level/20*8 %}class="grey"{% endif %}></span></li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="large-2 columns" {% if module.header.column_animation %}animated {{ module.header.column_animation }}{% endif %}">
+        <ul class="small-block-grid-1">
+          <li class="name">{{ item.level }}/20</li>
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+  {{ module.content }}
+</div>

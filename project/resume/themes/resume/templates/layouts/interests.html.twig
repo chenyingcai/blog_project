@@ -1,0 +1,16 @@
+<div class="avoid_pagebreak animated fadeInUp">
+  <h4 class="title"><i class="fi-{{ module.header.icon }}"></i> {{ module.header.title }}</h4>
+  <div class="row interests">
+    {% for item in module.header.interests %}
+    <div class="large-3 small-6 medium-3 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
+      <div class="int_icon">
+        <div class="activity">
+          <embed src="{{ url('theme://icons/svgs') }}/fi-{{ item.icon }}.svg" width='75' height='75' type="image/svg+xml" /><br/>
+          {{ item.activity }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {{ module.content }}
+</div>

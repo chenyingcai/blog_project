@@ -1,0 +1,41 @@
+<div class="avoid_pagebreak animated fadeInUp">
+  <h4 class="title"><i class="fi-{{ module.header.icon }}"></i> {{ module.header.title }}</h4>
+  <div class="row experience">
+    {% for item in module.header.experience %}
+    <div class="large-6 medium-6 small-2 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
+      <div class="year">
+        {% if item.years.svg %}
+        <embed src="{{ url('theme://icons/svgs') }}/fi-{{ item.years.name }}.svg" {% if item.years.width %}width="{{ item.years.width }}"{% endif %} {% if item.years.height %}height="{{ item.years.height }}"{% endif %} type="image/svg+xml" />
+        {% endif %}
+        {% if item.years.png %}
+        <embed src="{{ url('theme://img') }}/{{ item.years.name }}.png" {% if item.years.width %}width="{{ item.years.width }}"{% endif %} {% if item.years.height %}height="{{ item.years.height }}"{% endif %} type="image/png" />
+        {% endif %}
+      </div>
+      <div class="exp_data">
+        <div class="date">{{ item.date }}</div>
+        <div class="role">{{ item.role }}</div>
+        <div class="company">{{ item.company }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if module.header.supplementaire_title %}
+  <h5 class="supplementaire_title">{{ module.header.supplementaire_title }}</h5>
+  {% endif %}
+    {% for item in module.header.supplementaire %}
+    <div class="large-3 small-6 medium-3 columns {% if loop.last %}end{% endif %} bounceIn animated">
+        <div class="supplementaire_icon">
+            {% if item.svg %}
+            <center><embed src="{{ url('theme://icons/svgs') }}/fi-{{ item.icon }}.svg" {% if item.width %}width="{{ item.width }}"{% endif %} {% if item.height %}height="{{ item.height }}"{% endif %} type="image/svg+xml" /></center>
+            {% endif %}
+            {% if item.png %}
+            <center><embed src="{{ url('theme://img') }}/{{ item.icon }}.png" {% if item.width %}width="{{ item.width }}"{% endif %} {% if item.height %}height="{{ item.height }}"{% endif %} type="image/png" /></center>
+            {% endif %}
+            <span class="supplementaire_icon_text">
+              {{ item.desc }}
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+  {{ module.content }}
+</div>

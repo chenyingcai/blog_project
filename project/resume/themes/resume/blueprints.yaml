@@ -1,0 +1,13 @@
+name: Resume
+version: 1.0.1
+description: "This resume is a Grav adaptation of Fernando Báez resume PSD theme and developed on the base of zuolan/Zresume."
+icon: group
+author:
+  name: chenyingcai
+  email: cheningcai@outlook.com
+  url: 
+homepage: https://github.com/chenyingcai/resume
+demo: 
+keywords: resume, resume, theme, modern
+bugs: 
+license: MIT

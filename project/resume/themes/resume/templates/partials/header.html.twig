@@ -1,0 +1,53 @@
+<div id="header">
+    <div class="row animated fadeInDown">
+        {% if header.myphoto_url %}
+        <div class="large-2 columns">
+            <img src="{{ url(header.myphoto_url) }}" alt="" width={% if header.myphoto_width %}{{ header.myphoto_width }}{% endif %} height={% if header.myphoto_height %}{{ header.myphoto_height }}{% endif %} />
+        </div>
+        {% endif %}
+        <div class="large-2 columns">
+            {% if header.name %}
+                <h3>{{ header.name }}</h3>
+            {% endif %}   
+            {% if header.description %}
+                <h6 class="light">{{ header.description }}</h6>
+            {% endif %}
+        </div>
+        <div class="large-4 columns">
+            <div class="row">
+                <div class="small-4 columns light2">{{ header.baseinfo_name }}</div>
+                <div class="small-8 columns border-left">
+                    <ul class="no-bullet">
+                        {% for item in header.baseinfo %}
+                            <li>{{ item.line }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="small-4 columns light2">{{ header.contact_name }}</div>
+                <div class="small-8 columns border-left">
+                    <ul class="no-bullet">
+                        {% for item in header.contact %}
+                            <li>{{ item.line }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="large-4 columns">
+            <div class="row">
+                <div class="small-4 columns light2">{{ header.address_name }}</div>
+                <div class="small-8 columns border-left">
+                    <ul class="no-bullet">
+                        {% for item in header.address %}
+                            <li>{{ item.line }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="large-1 columns text-right website">
+            <a href="{{ header.download_url }}">{{ header.download_name }}</a>
+        </div>
+    </div>
+</div>
