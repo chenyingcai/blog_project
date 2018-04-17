@@ -13,18 +13,18 @@ if [[ -f $("pwd")/PROJECT2 ]]; then
     sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_publish.sh | bash"""
 fi
 
-if [ -f $('pwd')/PROJECT1 ]; then
+if [[ -f $('pwd')/PROJECT1 ]]; then
     echo -e "发现PROJECT1文件\n 进行项目第二阶段"
     echo "创建resume项目"
     mkdir -p $('pwd')/resume
     docker run -d --name resume_tmp $DOCKER_NAME
-    if [ ! -d "$('pwd')/resume/config" ]; then
+    if [[ ! -d "$('pwd')/resume/config" ]]; then
       docker cp resume_tmp:/usr/html/user/config $('pwd')/resume/config
     fi
-    if [ ! -d "$('pwd')/resume/pages" ]; then
+    if [[ ! -d "$('pwd')/resume/pages" ]]; then
       docker cp resume_tmp:/usr/html/user/pages $('pwd')/resume/pages
     fi
-    if [ ! -d "$('pwd')/resume/themes" ]; then
+    if [[ ! -d "$('pwd')/resume/themes" ]]; then
       docker cp resume_tmp:/usr/html/user/themes $('pwd')/resume/themes
     fi
     docker rm -f resume_tmp resume >/dev/null 2>&1

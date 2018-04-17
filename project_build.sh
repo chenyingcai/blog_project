@@ -8,7 +8,7 @@ $MY_RESUME = 'chenyingcai/resume:v1'
 $RESUME_PORT = 8080
 echo "开始检查是否有安装$HUGO_DEMO"
 echo $SEPR
-if [ "$(docker images -q $HUGO_DEMO 2> /dev/null)" == "" ]; then
+if [[ "$(docker images -q $HUGO_DEMO 2> /dev/null)" == "" ]]; then
     echo "没有找到$HUGO_DEMO容器"
     echo $SEPR
     echo "开始安装"
@@ -19,7 +19,7 @@ else
 fi
 echo "开始检查是否有安装$MY_RESUME"
 echo $SEPR
-if [ "$(docker images -q $MY_RESUME 2> /dev/null)" == "" ]; then
+if [[ "$(docker images -q $MY_RESUME 2> /dev/null)" == "" ]]; then
     echo "没有找到$MY_RESUME容器"
     echo $SEPR
     echo "开始安装"
