@@ -11,7 +11,7 @@ if [ -f $("pwd")/PROJECT2 ]; then
     alias copyresume="sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
     echo "之后每次要预览时, 运行就再一次运行这个脚本, 或者hugopre"
     hugopre
-    echo "若修改过resume内容,请执行copyresumesudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
+    echo "若修改过resume内容,请执行copyresume sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
     echo """修改好后,若要发布blog, 请执行项目第三阶段:
     sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_publish.sh | bash"""
 elif [ -f $('pwd')/PROJECT1 ]; then
@@ -56,7 +56,7 @@ elif [ -f $('pwd')/PROJECT1 ]; then
     echo "创建alias"
     alias hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
     echo "之后每次要预览时, 运行就再一次运行这个脚本, 或者hugopre"
-    echo "若修改过resume内容,请执行copyresumesudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
+    echo "若修改过resume内容,请执行copyresume sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
     alias copyresume="sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
     hugopre
     rm -rf PROJECT1
