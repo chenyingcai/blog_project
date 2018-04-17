@@ -1,4 +1,4 @@
-我们使用本项目中的`sh` 脚本命令来构建系统, 需要用到的有 [git]() [hugo_demo]() [Resume]()
+我们使用本项目中的`sh` 脚本命令来构建系统, 需要用到的有 [git](https://git-scm.com/about) [docker](https://askubuntu.com/questions/938700/how-do-i-install-docker-on-ubuntu-16-04-lts) [hugo_blog](https://github.com/chenyingcai/hugo_blog) [Resume](https://github.com/chenyingcai/Resume)
 
 ## 注意:
    这个项目是在 **Linux Ubuntu 16 以及以上** 实现的
