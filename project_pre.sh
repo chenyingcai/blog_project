@@ -10,7 +10,9 @@ if [ -f $("pwd")/PROJECT2 ]; then
     alias hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
     alias copyresume="sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
     echo "之后每次要预览时, 运行就再一次运行这个脚本, 或者hugopre"
-    hugopre
+    
+    docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false
+    
     echo "若修改过resume内容,请执行copyresume sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
     echo """修改好后,若要发布blog, 请执行项目第三阶段:
     sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_publish.sh | bash"""
@@ -36,10 +38,14 @@ elif [ -f $('pwd')/PROJECT1 ]; then
         -v $('pwd')/resume/static/:/usr/html/static \
         --restart=always $MY_RESUME
     echo "run the ngnix"
+    
     docker exec -it resume run
+    
     echo "Done"
     echo "generate the initial html file"
+    
     docker exec -it resume generate
+    
     echo "Done"
     echo $SEPR
     echo "有的时候我们启动resume容器会出现一些意外, 若打开localhost:$RESUME_PORT无显示"
@@ -53,12 +59,18 @@ elif [ -f $('pwd')/PROJECT1 ]; then
     echo "这样我们就可通过[博客的baseURL]/resume/ 查看我们简历了"
     mkdir -p $('pwd')/$PROJECTNAME/static/resume
     cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/
+    
     echo "创建alias"
-    alias hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
+    
+    hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
+    
     echo "之后每次要预览时, 运行就再一次运行这个脚本, 或者hugopre"
     echo "若修改过resume内容,请执行copyresume sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
+    
     alias copyresume="sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
-    hugopre
+    
+    docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false
+    
     rm -rf PROJECT1
     echo "" > PROJECT2
 else

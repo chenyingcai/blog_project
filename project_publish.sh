@@ -17,7 +17,7 @@ if [ -f $("pwd")/PROJECT3 ]; then
 elif [ -f $("pwd")/PROJECT2 ]; then
     MAIN_ADDRESS=$('pwd')
     echo "先用git clone git@github.com:chenyingcai/$GITPAGE.git 到本地"
-    git clone git@github.com:chenyingcai/$GITPAGE.git $('pwd')/$PROJECTNAME/
+    git clone git@github.com:chenyingcai/$GITPAGE.git $('pwd')/$PROJECTNAME/$GITPAGE
     cd $('pwd')/$PROJECTNAME/$GITPAGE
     sudo ls | grep -v ".git" | xargs rm -rf
     cd $MAIN_ADDRESS
