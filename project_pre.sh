@@ -5,6 +5,7 @@ PROJECTNAME="demo"
 HUGO_DEMO="chenyingcai/hugo_demo:v1"
 MY_RESUME="chenyingcai/resume:v1"
 BLOG_PORT=8000
+RESUME_PORT=8080
 if [ -f $("pwd")/PROJECT2 ]; then
     alias hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
     alias copyresume="sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"
