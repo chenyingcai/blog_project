@@ -10,12 +10,6 @@
 curl -o project_build.sh https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_build.sh
 sudo /bin/sh project_build.sh
 ```
-或者 **(推荐)**
-
-```sh
-sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_build.sh | bash
-```
-
 或者
 
 ```sh
@@ -30,12 +24,6 @@ cd blog_project | sudo /bin/sh project_build.sh
 curl -o project_pre.sh https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_pre.sh
 sudo /bin/sh project_pre.sh
 ```
-或者 **(推荐)**
-
-```sh
-sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_pre.sh | bash
-```
-
 或者
 
 ```sh
@@ -49,12 +37,6 @@ cd blog_project | sudo /bin/sh project_pre.sh
 curl -o project_publish.sh https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_publish.sh
 sudo /bin/sh project_publish.sh
 ```
-或者 **(推荐)**
-
-```sh
-sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_publish.sh | bash
-```
-
 或者
 
 ```sh
