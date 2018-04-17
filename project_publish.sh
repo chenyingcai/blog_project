@@ -6,22 +6,24 @@ HUGO_DEMO='chenyingcai/hugo_demo:v1'
 BLOG_PORT=8000
 if [ -f $("pwd")/PROJECT3 ]; then
     MAIN_ADDRESS=$('pwd')
-    copyresume
+    sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/
+    cd $('pwd')/$PROJECTNAME/$GITPAGE
+    ls | grep -v ".git" | xargs rm -rf
+    cd $MAIN_ADDRESS
     docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo -d $GITPAGE/
     cd $('pwd')/$PROJECTNAME/$GITPAGE
-    sudo ls | grep -v ".git" | xargs rm -rf
     git add .
     git commit -m "update"
-    git push origin master
+    git push -u origin master
     cd $MAIN_ADDRESS
 elif [ -f $("pwd")/PROJECT2 ]; then
     MAIN_ADDRESS=$('pwd')
     echo "先用git clone git@github.com:chenyingcai/$GITPAGE.git 到本地"
     git clone git@github.com:chenyingcai/$GITPAGE.git $('pwd')/$PROJECTNAME/$GITPAGE
     cd $('pwd')/$PROJECTNAME/$GITPAGE
-    sudo ls | grep -v ".git" | xargs rm -rf
+    ls | grep -v ".git" | xargs rm -rf
     cd $MAIN_ADDRESS
-    copyresume
+    sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/
     docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo -d $GITPAGE/
     cd $('pwd')/$PROJECTNAME/$GITPAGE
     git add .
@@ -33,4 +35,3 @@ else
     echo "WARNING!: 未完成项目第二阶段"
     echo "请先执行项目第二阶段: sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/project_pre.sh | bash"
 fi
-
