@@ -1,25 +1,15 @@
-#! /bin/sh
+#!/bin/sh
 # 由于存在需要权限建立新的文件夹,以及移动文件等 建议使用sudo /bin/bash project_build.sh 启动此命令
 
-$SEPR = '=========================================='
-$PROJECTNAME = "demo"
-$HUGO_DEMO = 'chenyingcai/hugo_demo:v1'
-$MY_RESUME = 'chenyingcai/resume:v1'
-$RESUME_PORT = 8080
-echo "开始检查是否有安装$HUGO_DEMO"
-echo $SEPR
-if [[ "$(docker images -q $HUGO_DEMO 2> /dev/null)" == "" ]]; then
-    echo "没有找到$HUGO_DEMO容器"
-    echo $SEPR
-    echo "开始安装"
-    curl https://github.com/chenyingcai/hugo_blog/blob/master/build_hugo_demo.sh | bash
-else
-    echo "已经安装$HUGO_DEMO"
-    echo $SEPR
-fi
+SEPR="=========================================="
+PROJECTNAME="demo"
+HUGO_DEMO="chenyingcai/hugo_demo:v1"
+MY_RESUME="chenyingcai/resume:v1"
+RESUME_PORT=8080
+
 echo "开始检查是否有安装$MY_RESUME"
 echo $SEPR
-if [[ "$(docker images -q $MY_RESUME 2> /dev/null)" == "" ]]; then
+if [ "$(docker images -q $MY_RESUME 2> /dev/null)" == "" ]; then
     echo "没有找到$MY_RESUME容器"
     echo $SEPR
     echo "开始安装"
@@ -38,6 +28,18 @@ if [[ "$(docker images -q $MY_RESUME 2> /dev/null)" == "" ]]; then
     echo $SEPR
 else
     echo "已经安装$MY_RESUME"
+    echo $SEPR
+fi
+
+echo "开始检查是否有安装$HUGO_DEMO"
+echo $SEPR
+if [ "$(docker images -q $HUGO_DEMO 2> /dev/null)" == "" ]; then
+    echo "没有找到$HUGO_DEMO容器"
+    echo $SEPR
+    echo "开始安装"
+    curl https://raw.githubusercontent.com/chenyingcai/hugo_blog/master/build_hugo_demo.sh | bash
+else
+    echo "已经安装$HUGO_DEMO"
     echo $SEPR
 fi
 echo "开始复制$HUGO_DEMO里的demo模板到本地"

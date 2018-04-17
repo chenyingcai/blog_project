@@ -1,10 +1,10 @@
 #! /bin/sh
 # 由于存在需要权限建立新的文件夹,以及移动文件等 建议使用sudo /bin/bash project_publish.sh 启动此命令
-$PROJECTNAME = "demo"
-$GITPAGE="chenyingcai.github.io"
-$HUGO_DEMO = 'chenyingcai/hugo_demo:v1'
+PROJECTNAME = "demo"
+GITPAGE="chenyingcai.github.io"
+HUGO_DEMO = 'chenyingcai/hugo_demo:v1'
 
-if [[ -f $("pwd")/PROJECT3 ]]; then
+if [ -f $("pwd")/PROJECT3 ]; then
     $MAIN_ADDRESS=$('pwd')
     copyresume
     docker run --it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo -d $GITPAGE/
@@ -15,7 +15,7 @@ if [[ -f $("pwd")/PROJECT3 ]]; then
     cd $MAIN_ADDRESS
 fi
 
-if [[ -f $("pwd")/PROJECT2 ]]; then
+if [ -f $("pwd")/PROJECT2 ]; then
     $MAIN_ADDRESS=$('pwd')
     echo "先用git clone git@github.com:chenyingcai/$GITPAGE.git 到本地"
     git clone git@github.com:chenyingcai/$GITPAGE.git $('pwd')/$PROJECTNAME/
