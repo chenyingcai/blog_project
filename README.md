@@ -42,6 +42,7 @@ sudo curl https://raw.githubusercontent.com/chenyingcai/blog_project/master/proj
 git clone https://github.com/chenyingcai/blog_project.git
 cd blog_project | sudo /bin/sh project_pre.sh
 ```
+到这一步为止, 我们已经基本上本地构建完成了, 之后修改post内容, 每一次执行project_pre.sh 就行, 只需要启动hugo server, 就能一直一遍修改一遍预览
 
 ## 构建静态文件, 并发布到自己的github page 中去
 
