@@ -11,4 +11,10 @@
     </h1>
   {{ end }}
   {{ partial "post/meta.html" . }}
+  {{ if .Params.Mathjax }}
+      {{ partial "Mathjav_support.html" . }}
+  {{ end }}
+  {{ if .Params.bibtexjs }}
+      <script type="text/javascript" src="/js/bibtexjs.js"></script>
+  {{ end }}
 </div>

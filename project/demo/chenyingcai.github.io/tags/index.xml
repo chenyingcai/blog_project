@@ -6,35 +6,26 @@
     <description>Recent content in Tags on Welcome to CHEN&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://chenyingcai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Chinese</title>
-      <link>https://chenyingcai.github.io/tags/chinese/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      <title>Cir</title>
+      <link>https://chenyingcai.github.io/tags/cir/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://chenyingcai.github.io/tags/chinese/</guid>
+      <guid>https://chenyingcai.github.io/tags/cir/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cover Image</title>
-      <link>https://chenyingcai.github.io/tags/cover-image/</link>
-      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
+      <title>Computation</title>
+      <link>https://chenyingcai.github.io/tags/computation/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://chenyingcai.github.io/tags/cover-image/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dailymotion</title>
-      <link>https://chenyingcai.github.io/tags/dailymotion/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/dailymotion/</guid>
+      <guid>https://chenyingcai.github.io/tags/computation/</guid>
       <description></description>
     </item>
     
@@ -48,11 +39,11 @@
     </item>
     
     <item>
-      <title>Github Theme</title>
-      <link>https://chenyingcai.github.io/tags/github-theme/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
+      <title>Gbm</title>
+      <link>https://chenyingcai.github.io/tags/gbm/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://chenyingcai.github.io/tags/github-theme/</guid>
+      <guid>https://chenyingcai.github.io/tags/gbm/</guid>
       <description></description>
     </item>
     
@@ -84,56 +75,20 @@
     </item>
     
     <item>
-      <title>Highlight Code</title>
-      <link>https://chenyingcai.github.io/tags/highlight-code/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
+      <title>Matlab</title>
+      <link>https://chenyingcai.github.io/tags/matlab/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://chenyingcai.github.io/tags/highlight-code/</guid>
+      <guid>https://chenyingcai.github.io/tags/matlab/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Html Elements</title>
-      <link>https://chenyingcai.github.io/tags/html-elements/</link>
-      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
+      <title>Optimal Stopping</title>
+      <link>https://chenyingcai.github.io/tags/optimal-stopping/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://chenyingcai.github.io/tags/html-elements/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Image Gallery</title>
-      <link>https://chenyingcai.github.io/tags/image-gallery/</link>
-      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/image-gallery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Japanese</title>
-      <link>https://chenyingcai.github.io/tags/japanese/</link>
-      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/japanese/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Markdown</title>
-      <link>https://chenyingcai.github.io/tags/markdown/</link>
-      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pagination</title>
-      <link>https://chenyingcai.github.io/tags/pagination/</link>
-      <pubDate>Fri, 15 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/pagination/</guid>
+      <guid>https://chenyingcai.github.io/tags/optimal-stopping/</guid>
       <description></description>
     </item>
     
@@ -143,69 +98,6 @@
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://chenyingcai.github.io/tags/responsive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Social</title>
-      <link>https://chenyingcai.github.io/tags/social/</link>
-      <pubDate>Sun, 17 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/social/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tag Plugins</title>
-      <link>https://chenyingcai.github.io/tags/tag-plugins/</link>
-      <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/tag-plugins/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tags</title>
-      <link>https://chenyingcai.github.io/tags/tags/</link>
-      <pubDate>Sat, 16 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/tags/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://chenyingcai.github.io/tags/test/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Videos Integration</title>
-      <link>https://chenyingcai.github.io/tags/videos-integration/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/videos-integration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vimeo</title>
-      <link>https://chenyingcai.github.io/tags/vimeo/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/vimeo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Youtube</title>
-      <link>https://chenyingcai.github.io/tags/youtube/</link>
-      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenyingcai.github.io/tags/youtube/</guid>
       <description></description>
     </item>
     
