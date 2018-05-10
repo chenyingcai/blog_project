@@ -83,7 +83,7 @@ elif [ -f $('pwd')/PROJECT1 ]; then
     
     echo "创建alias"
     
-    hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
+    alias hugopre="docker run -it --rm -p $BLOG_PORT:1313 -v $('pwd')/$PROJECTNAME/:/hugo/ $HUGO_DEMO hugo server --baseURL=localhost:$BLOG_PORT --bind=0.0.0.0 --appendPort=false"
     
     echo "之后每次要预览时, 运行就再一次运行这个脚本, 或者hugopre"
     echo "若修改过resume内容,请执行copyresume sudo rm -rf $('pwd')/resume/static/* && docker exec -it resume generate && cp -rf $('pwd')/resume/static/* $('pwd')/$PROJECTNAME/static/resume/"

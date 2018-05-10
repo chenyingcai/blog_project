@@ -78,7 +78,7 @@ buying and selling one share of a given asset at fixed transaction cost. Finally
 simulate the trajectory of SDE and the corresponding maximization value function.
 
 
-## Optimal Stopping Problem
+# Optimal Stopping Problem
 In this section, we will make a brief introduction to optimal stopping problem
 in one-dimensional space. Firstly, we consider a one-dimensional Itô
 diffusion X on $\mathbb{R}^n$ that represent an underlying asset price
@@ -141,7 +141,7 @@ Combining $\textit{Eq}\eqref{eq:Total_2}$, $\textit{Eq}\eqref{eq:Total_7}$ and $
 
 $$|\nu (x)-\nu (y)|\leq C |x-y|$$
 
-### Smooth-fit principle
+## Smooth-fit principle
 
 We firstly introduce two sets in respect of the second term on the left hand side of $\textit{Eq}\eqref{eq:Total_4}$. The open set
 $$\pmb{\mathcal{C}}\text{:=} \{x\in  \mathbb{R}: \nu (x)>g(x)\}$$ and its complement set 
@@ -164,7 +164,7 @@ $\nu ^\prime (\bar{x}\)=g ^\prime (\bar{x}\)$.
 </dl>
 
 
-## Buy low and sell high strategies
+# Buy low and sell high strategies
 The buy low and sell high strategies could be considered as a specific optimal
 stopping problem and involves in optimal switching. In this section, we would
 like to introduce a typical buy low and sell high analytic model in which the
@@ -194,22 +194,28 @@ We take $c_s $ $(c_b \)$ as the positive constant cost of buying (selling) one s
 
 In this model, we don't take into account the running profit function and $f(x)=0$. Actually, in accordance to the framework in previous section,
 we could also redefine $\textit{Eq}\eqref{eq:Total_10}$ and $\textit{Eq}\eqref{eq:Total_11}$ by setting
+
 \begin{equation}
 g_1(x) = x - c_s \text{ and } g_2= -x - c_b
 \label{eq:Total_13}
 \end{equation}
+
 Then we could reconstruct the $\textit{Eq}\eqref{eq:Total_12}$ by
+
 \begin{equation}
-\nu _1 = \underset{\tau \in \mathcal{T}}{\sup } \mathbb{E}\[e^{-\beta \tau
-}g_1(X _{\tau }^x\)\] \text{ and } \nu _2 = \underset{\tau\in
-\mathcal{T}}{\sup } \mathbb{E}\[e^{-\beta \tau }g_2(X _{\tau }^x\)\]
+\nu _1 = \underset{\tau \in \mathcal{T}}{\sup } \mathbb{E}\left[e^{-\beta \tau
+}g_1\left(X _{\tau }^x\right)\right] \text{ and } \nu _2 = \underset{\tau\in
+\mathcal{T}}{\sup } \mathbb{E}\left[e^{-\beta \tau }g_2 \left( X _{\tau }^x\right) \right]
 \label{eq:Total_14}
 \end{equation}
+
 We shall appeal to the dynamic programming principle under the following form
+
 \begin{equation}
-\nu (x,i) = \underset{\tau \in \mathcal{T}}{\sup } \mathbb{E}\[e^{-\beta  \tau }g_i(X _{\tau }^x\) \mathbf{1} _{\{\tau <\theta \}} +e^{-\beta  \tau }\nu (X _{\tau }^x,j\)\mathbf{1} _{\{\tau <\theta \}}+e^{-\beta  \theta }\nu (X _{\theta }^x, i\)\]
+\nu (x,i) = \underset{\tau \in \mathcal{T}}{\sup } \mathbb{E}\left[ e^{-\beta  \tau }g_i \left( X _{\tau }^x \right) \mathbf{1} _{\left\\{ \tau <\theta \right\\}} +e^{-\beta  \tau }\nu \left( X _{\tau }^x,j \right) \mathbf{1} _{\left\\{ \tau <\theta \right\\} }+e^{-\beta  \theta }\nu \left( X _{\theta }^x, i\right) \right]
 \label{eq:Total_15}
 \end{equation}
+
 This means that at any time $\theta \in \mathcal{T}$, we might decide to switch the regime or decide to continue. So our optimal stopping problem will be transformed to 
 \begin{equation}
 \min \{\beta \nu _1-\mathcal{L} \nu _1, \nu _1-(v_2+g_1\)\}=0 \text{ and } \min \{\beta \nu _2-\mathcal{L} \nu _2, \nu_2-(\nu _1+g_2\)\}=0
@@ -350,7 +356,7 @@ The above assumption, in fact, implies that
 \end{equation}
 Now, let's consider two different case. The first one arise when $\mathcal{S}_2=\emptyset $ and it is optimal for investors to sell as soon as the price exceeds a given level $x _1 ^\* $ if they hold asset (i.e. we are in regime 1), and never enter the market otherwise (i.e. in regime 2). The second one arise when $\mathcal{S}_2 = (0, x _2^\* \]$ and the investors shall sequentially buy asset when the price fall below a given level $x _2 ^\* $ while sell asset as soon as possible when the price exceeds $x _1 ^\* $.
 
-### Case 1 ($\mathcal{S}_2=\emptyset $)
+## Case 1 ($\mathcal{S}_2=\emptyset $)
 With the condition $\mathcal{S}_2=\emptyset $ and the complement $\mathcal{C}_2=(0, \infty )$ , let's consider $ \mathcal{S}_1=[x_1^\* ,\text{ }\infty ) $ with $ x_1^\* \in (0, \infty ) $ and the following function
 
 \begin{equation}
@@ -498,7 +504,7 @@ then, $\textit{Eq}\eqref{eq:Total_46}$ holds. We finish the proof
 </blockquote>
 </dl>
 
-### Case 2 ($\left.\mathcal{S}_2= (0, x_2^\*\right.\]$)
+## Case 2 ($\left.\mathcal{S}_2= (0, x_2^\*\right.\]$)
 Considering the following function with \\(\left.\left.\mathcal{S}_1=\[x_1^\*,
 \infty \right. ), \mathcal{C}_1= (0, x_1^\* ),
 \mathcal{S}_2= (0, x_2^\*\right.\], \mathcal{C}_1= (x_2^\*, \infty
@@ -547,7 +553,7 @@ $$ q _{\varphi }(x, z) = \int _x^{\infty } \Phi (s) \(\beta  g_1(s) - \mathcal{L
 g_2(s) - \mathcal{L} g_2(s) \) d s $$
 $$ q _{\psi }(x, z) = \int _0^x \Psi (s) \(\beta  g_1(s) - \mathcal{L} g_1(s) \) d s - \int _0^z \Psi (s) \(\beta  g_2(s) - \mathcal{L}
 g_2(s) \) d s $$
-## Simulation
+# Simulation
 In order to simulate the SDE(Stochastic Differential Equation), we mainly use the Matlab to generate the series since <span hidden>\citet{higham2001algorithmic}<\span>Higham (2001) have done a very good summery and methodology. But there are also some default and we should determine which simulation approach depending on which
 process we have. In this section, we will take some examples to simulate. With the Monte Carlo approach, we are likely to make the expected values
 of the underlying asset price approximated by the computed generated average of the dataset which could be simulated by the random generator on the
@@ -564,7 +570,7 @@ process to the simulation for Cox-Ingersoll-Ross process to the simulation for
 GBM. <span hidden>\citet{dereich2011euler}<\span>Dereich et al. (2011) have analyzed the strong approximation of the
 Cox-Ingersoll-Ross process using Lamperti transformation or chain rule (proposed
 by <span hidden>\citet{lamperti1962semi}<\span>)Lamperti (1962).
-### Simulation of Geometric Brownian Motion(GBM) 
+## Simulation of Geometric Brownian Motion(GBM) 
 
 We firstly simulate and suppose that the asset price X is a GBM. We thus have the SDE of X as following:
 \begin{equation}
@@ -572,7 +578,7 @@ We firstly simulate and suppose that the asset price X is a GBM. We thus have th
 \label{eq:Total_51}
 \end{equation}
 where $W_t$ is standard Wiener process. Now, we shall discuss the discretized Brownian path and Euler-Maruyama scheme, respectively.
-#### Discretized Brownian path
+### Discretized Brownian path
 In fact, we could directly compute the general formula of $\textit{Eq}\eqref{eq:Total_51}$ which is denoted by
 \begin{equation}
 X_t= X_0 + \int _0^t\text{bX}_s\text{ds}+\int _0^t\text{$\sigma $X}_s\text{dW}_s\Longrightarrow X_T=X_0e^{\text{$\mu $T}+\text{$\sigma $W}_T}
@@ -659,7 +665,7 @@ our simulation computation and here we will chose the simulation parameters by $
     <center><b>Figure 1 :</b>The simulation results of $dX _{t} = 0.15 X_t dt + 0.1 X_t dW_t$</center>
 </div>
 
-#### Euler-Maruyama Scheme(EM)
+### Euler-Maruyama Scheme(EM)
 Actually, we could directly simulate the SDE instead of the analytic solution (like $\textit{Eq}\eqref{eq:Total_53}$) through Euler-Maruyama Method which takes the form
 $$X_j = X _{j-1}+f\(X _{j-1}\) \text{$\Delta $t}+g\(X _{j-1}\)\(W _{\tau _j}-W _{\tau _{j-1}}\) , j=1,2,\ldots , \frac{T}{N}$$
 corresponding to the $\textit{Eq}\eqref{eq:Total_52}$. In our case, we takes the $f\(X_t\) = \mu  X_t$ and $g\(X_t\) = \sigma  X_t$ with $\mu , \sigma$
@@ -708,7 +714,7 @@ simulated by above approach and $X _{\text{euler}}$ to the sample simulated by E
     <center><b>Figure 2 :</b>Strong convergence between EM and analytic solution for GBM</center>
 </div>
 
-#### Value function 
+### Value function 
 
 Now, we shall discuss the optimal stopping problem regarding the underlying price which follow a GBM. We suppose a positive
 constant $\beta$ ($>b$) and the value function represented in $\textit{Eq}\eqref{eq:Total_12}$ and the stopping function regarding the optimal stopping problem, represented in $\textit{Eq}\eqref{eq:Total_13}$. So that our optimal stopping problem will be the representations in $\textit{Eq}\eqref{eq:Total_16}$. Let's consider two $C^1$ function $\varphi , \psi$ such that
@@ -828,7 +834,7 @@ market if we don't hold the asset and $\tau _2\to  \infty$.
 <center><b>Figure 3 :</b> Expectation and simulated results of value functions in GBM model starting at different initial value $X_0$</center>
 </div>
 
-### Simulation of CIR Process 
+## Simulation of CIR Process 
 
 Suppose that the asset price is a CIR process and is given by
 \begin{equation}
@@ -890,7 +896,7 @@ presented in [Figure 4a](#fig:em_em_chain_rule) .
 <center><b>Figure 4 :</b>EM, EM by chain rule and transforming back scheme's simulation results in CIR model</center>
 </div>
 
-#### Value function of CIR process 
+### Value function of CIR process 
 
 Let's consider two $C^1$ function $\varphi , \psi$ such that 
 
