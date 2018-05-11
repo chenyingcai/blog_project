@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Welcome to CHEN&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://chenyingcai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Cir</title>
       <link>https://chenyingcai.github.io/tags/cir/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://chenyingcai.github.io/tags/cir/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>Gbm</title>
       <link>https://chenyingcai.github.io/tags/gbm/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://chenyingcai.github.io/tags/gbm/</guid>
       <description></description>
@@ -86,9 +86,18 @@
     <item>
       <title>Optimal Stopping</title>
       <link>https://chenyingcai.github.io/tags/optimal-stopping/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://chenyingcai.github.io/tags/optimal-stopping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://chenyingcai.github.io/tags/python/</link>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenyingcai.github.io/tags/python/</guid>
       <description></description>
     </item>
     

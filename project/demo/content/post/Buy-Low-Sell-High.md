@@ -1014,6 +1014,7 @@ temporal fluctuation.
 | 1.3889  |  1.7166  |  0.0000  |  1.7166  |  0.0000  |  0.3098  |  5.5000  |  0.3427 | 0.0329  |
 | 1.5000  |  1.8168  |  0.0000  |  1.8168  |  0.0000  |  0.2985  |  8.5600  |  0.3318 | 0.0333  | 
 <center><a name="tb:table2">Table 2</a>\: Results of expected value and simulated value with different initial value $X_0$ in CIR model
+</center>
 
 <div>
     <a name="fig:cir_value_funs"></a>
